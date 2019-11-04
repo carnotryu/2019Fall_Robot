@@ -4,5 +4,4 @@
 - MEGA
 - L298 Shield
 - DC geared motor with encoder (SJ01): gear ratio of 120, pulse/rev of 16
-- Blue wire from encoder: pin 2 (interrupt 0)
-- Green wire from encoder: pin 4
+- Blue wire from encoder: pin 2 (interrupt 0), green wire from encoder: pin 4
