@@ -1,4 +1,4 @@
-int pulses;
+float pulses;
 int pulsesChanged;
 int encA = 2;   // blue wire
 int encB = 4;
