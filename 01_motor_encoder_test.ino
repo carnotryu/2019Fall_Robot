@@ -7,7 +7,7 @@ int pwmPinA = 3;
 float ang = 0.0;
 float rev = 0.0;
 int dira = 0;
-int pwma = 0;
+int pwma = 255;
 
 void setup() {
   Serial.begin(9600);
@@ -74,12 +74,12 @@ void A_CHANGE() {
 
 void m_cw() {
   digitalWrite(dirPinA, 1);
-  digitalWrite(pwmPinA, 255);  
+  analogWrite(pwmPinA, pwma);  
 }
 
 void m_ccw() {
   digitalWrite(dirPinA, 0);
-  digitalWrite(pwmPinA, 255);    
+  analogWrite(pwmPinA, pwma);    
 }
 
 void m_stop() {
