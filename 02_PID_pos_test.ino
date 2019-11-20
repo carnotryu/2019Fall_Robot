@@ -7,6 +7,7 @@ int encB = 4;
 int dirPinA = 12, pwmPinA = 3;
 float ang = 0.0, rev = 0.0;
 int stop_flag = 0;
+int out_low = 30;
 
 double Setpoint = 0.0, Input = 0.0, Output = 0.0;
 
@@ -44,9 +45,11 @@ void loop() {
   myPID.Compute();
 
   if (Output > 0) {
+    if (Output < out_low)  Output = out_low;
     digitalWrite(dirPinA, 1);
   }
   else if (Output < 0) {
+    if (Output > -out_low) Output = -out_low;
     digitalWrite(dirPinA, 0);
   }
   
